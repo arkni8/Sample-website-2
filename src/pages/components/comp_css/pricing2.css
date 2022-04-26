@@ -1,0 +1,104 @@
+.pricing2 {
+    width: 100%;
+}
+
+.pricing2 h2 {
+    padding-block: 30px;
+    transform: translateY(40px);
+    opacity: 0;
+    transition: transform 0.5s ease-out, opacity 0.3s linear;
+}
+
+.pricing2 .side-scroll2 {
+    --gap: 50px;
+    /* gap: var(--gap); */
+    max-width: calc(875px - var(--gap));
+    width: 90%;
+    position: relative;
+    margin-inline: auto;
+    padding-block: 40px;
+    scrollbar-width: none;
+    scroll-snap-type: inline;
+    scroll-behavior: smooth;
+    user-select: none;
+    overflow: hidden;
+}
+
+@media (max-width: 575px) {
+    .pricing2 h2 {
+        padding-inline: 5%;
+    }
+    .pricing2 .side-scroll2 {
+        padding-block: 20px;
+    }
+}
+
+.pricing2 .sweeper {
+    --gap: 50px;
+    --width-each-icon: 175px;
+    --start-animating: 6;
+    display: grid;
+    grid-auto-flow: column;
+    gap: var(--gap);
+    scroll-snap-align: start;
+    font-size: 150px;
+    color: rgb(0, 114, 38);
+    fill: rgb(0, 114, 38);
+    user-select: none;
+}
+
+/* .side-scroll2::after {
+  position: absolute;
+  inset: 0 -10px 0 -280px;
+  content: ' ';
+  background: linear-gradient(0.25turn, #ffffff 1%, #ffffff00, 99%, #ffffff);
+} */
+
+.pricing2 .sweeper.transition-base {
+    transition: all 0.3s linear; 
+}
+
+.pricing2 .sweeper.animate {
+  /* --start-animating: 6; */
+  /* animation: scroll ease-out 15s infinite; */
+  animation-name: scroll;
+  animation-timing-function: ease-out;
+  animation-duration: 14s;
+  animation-iteration-count: infinite;
+  animation-delay: 1.5s;
+}
+
+.pricing2 .fadeIn {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.pricing2 .sweeper svg {
+    width: 125px;
+    align-self: center;
+}
+
+/* 0, 16, 33, 49, 66, 82, 100 */
+@keyframes scroll {
+    0% {
+      transform: translateX(calc(-175px * var(--start-animating)));
+    }
+    16% {
+      transform: translateX(calc(-175px * (var(--start-animating) + 1)));
+    }
+    33% {
+      transform: translateX(calc(-175px * (var(--start-animating) + 2)));
+    }
+    49% {
+      transform: translateX(calc(-175px * (var(--start-animating) + 3)));
+    }
+    66% {
+      transform: translateX(calc(-175px * (var(--start-animating) + 4)));
+    }
+    82% {
+      transform: translateX(calc(-175px * (var(--start-animating) + 5)));
+    }
+    100% {
+      transform: translateX(calc(-175px * (var(--start-animating) + 6)));
+    }
+}

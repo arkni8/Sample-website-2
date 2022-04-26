@@ -1,0 +1,13 @@
+.map-container {
+    width: 85%;
+    height: 500px;
+    border-radius: 10px;
+    margin-inline: auto;
+    background-color: blanchedalmond;
+}
+
+@media screen and (max-width: 575px) {
+    .map-container {
+        width: 95%;
+    }
+}

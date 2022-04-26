@@ -1,0 +1,33 @@
+.pricing {
+    width: 100%;
+}
+
+.pricing h2 {
+    padding-block: 30px;
+}
+
+.pricing .side-scroll {
+    --gap: 50px;
+    display: grid;
+    grid-auto-flow: column;
+    /* grid-row: 1; */
+    gap: var(--gap);
+    max-width: calc(875px - var(--gap));
+    width: 90%;
+    margin-inline: auto;
+    padding-block: 40px;
+    padding-inline: 25px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    scroll-snap-type: inline;
+    scroll-behavior: smooth;
+    user-select: none;
+}
+
+.pricing svg {
+    scroll-snap-align: start;
+    width: 125px;
+    fill: rgb(0, 114, 38);
+    place-self: center;
+    user-select: none;
+}

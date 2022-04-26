@@ -1,0 +1,64 @@
+.stats > * {
+    margin: 0;
+}
+
+.wave-container .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    position: relative;
+    z-index: 200;
+    column-gap: 2ch;
+    padding-inline: 10%;
+    padding-top: 5%;
+}
+
+.wave-container {
+    height: 400px;
+    position: relative;
+    background-color: purple;
+    color: azure;
+}
+
+.wave-container h3 {
+    padding-top: 5%;
+}
+
+.wave-container .stats {
+    background-color: rgba(166, 5, 172, 0.651);
+    padding: 5%;
+    box-shadow: 0 0 5px 1px black;
+    border-radius: 8px;
+    opacity: 0;
+}
+
+.slide-in-stats {
+    animation: slide-in-stats-frame .8s ease-out forwards;
+}
+
+@keyframes slide-in-stats-frame {
+    from {
+        transform: translateY(70px);
+        opacity: 40%;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 100%;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .wave-container .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        row-gap: 20px;
+    }
+    .wave-container {
+        height: unset;
+        padding-block: 3.5rem;
+        padding-bottom: 9.5rem;
+    }
+    .wave-container h3 {
+        padding-top: unset;
+    }
+}
+

@@ -1,48 +1,169 @@
 .App {
     text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    overflow-x: hidden;
 }
 
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+h1, h2, h3, h4, p, ul {
+    margin: 0;
+    padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+.particles-canvas {
+    animation: opacity-change 1s ease-in forwards;
 }
 
-.App-header {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-}
-
-.App-link {
-    color: #61dafb;
-}
-
-@keyframes App-logo-spin {
+@keyframes opacity-change {
     from {
-        transform: rotate(0deg);
+        opacity: 0%;
     }
     to {
-        transform: rotate(360deg);
+        opacity: 100%;
     }
 }
 
 #tsparticles {
-    position: fixed;
-    height: 100%;
+    background-color: #00045b;
+    position: absolute;
     width: 100%;
     margin: 0;
     padding: 0;
-    left: 0;
-    top: 0;
+    inset: 0;
     z-index: -1;
+}
+
+.hero-section {
+    position: relative;
+    height: max(100vh, 900px);
+    text-align: center;
+    background-color: #00045b;
+    z-index: -2;
+}
+
+.hero-section .img {
+    position: relative;
+    top: -190px;
+    transition: top 0.3s;
+}
+
+.hero-section .img::before {
+    background-color: #46a1c57a;
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: 100%;
+    width: 100%;
+    max-width: 950px;
+    margin-block: 180px;
+    opacity: 30%;
+    margin-inline: auto;
+    filter: blur(30px);
+}
+
+.img img {
+    width: 100%;
+    max-width: 900px;
+}
+
+.hero-remark {
+    padding-top: 290px;
+    color: azure;
+    font-size: 1.8em;
+}
+
+.hero-section .features {
+    position: relative;
+    top: -230px;
+    color: fuchsia;
+    letter-spacing: 4px;
+}
+
+.map-outer {
+    background-color: #00045b;
+    padding-block: 2%;
+}
+
+@keyframes car-bounce {
+    from {
+        top: -190px;
+    }
+    50% {
+        top: -192px;
+    }
+    to {
+        top: -190px;
+    }
+}
+
+@keyframes slide-in-animation {
+    from {
+        transform: translateX(1500px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+    .img {
+        animation: slide-in-animation 1s ease-in forwards;
+    }
+    .img-bounce {
+        animation: car-bounce 1.6s ease infinite;
+    }
+}
+
+.animation-paused > * {
+    animation-play-state: paused;
+}
+
+.animation-paused {
+    animation-play-state: paused;
+}
+
+@media (max-width: 575px) {
+    .hero-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+        padding-block: 60px;
+    }
+    .img img {
+        display: none;
+    }
+    .hero-remark {
+        padding-top: unset;
+        color: azure;
+        font-size: 1.8rem;
+    }
+    .hero-section .features {
+        position: relative;
+        top: unset;
+        color: fuchsia;
+        letter-spacing: 4px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 991px) {
+    .img img {
+        width: 80%;
+        max-width: 900px;
+    }
+    .hero-section .img {
+        top: -145px;
+    }
+    @keyframes car-bounce {
+        from {
+            top: -145px;
+        }
+        50% {
+            top: -142px;
+        }
+        to {
+            top: -145px;
+        }
+    }
 }
