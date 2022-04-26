@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Sample-website-2/static/css/main.bac57e8f.css",
+    "main.js": "/Sample-website-2/static/js/main.4fd1613b.js",
+    "static/js/53.09c375f5.chunk.js": "/Sample-website-2/static/js/53.09c375f5.chunk.js",
+    "static/media/nsx341.png": "/Sample-website-2/static/media/nsx341.b69326f91bb1d44c5a67.png",
+    "static/media/support.jpg": "/Sample-website-2/static/media/support.b618d4c2fbed178a9659.jpg",
+    "static/media/operator.jpg": "/Sample-website-2/static/media/operator.b3b2e24d370ed61bec27.jpg",
+    "static/media/doctor.jpg": "/Sample-website-2/static/media/doctor.fdff625bb144c55da483.jpg",
+    "static/media/brandlogo.svg": "/Sample-website-2/static/media/brandlogo.e04968c6ecced41bba6ec62f006af97f.svg",
+    "index.html": "/Sample-website-2/index.html",
+    "static/media/rect1.svg": "/Sample-website-2/static/media/rect1.14b4d7fa59badc6149fa2f3f90214a2d.svg",
+    "static/media/rect2.svg": "/Sample-website-2/static/media/rect2.14b4d7fa59badc6149fa2f3f90214a2d.svg",
+    "static/media/rect3.svg": "/Sample-website-2/static/media/rect3.14b4d7fa59badc6149fa2f3f90214a2d.svg",
+    "main.bac57e8f.css.map": "/Sample-website-2/static/css/main.bac57e8f.css.map",
+    "main.4fd1613b.js.map": "/Sample-website-2/static/js/main.4fd1613b.js.map",
+    "53.09c375f5.chunk.js.map": "/Sample-website-2/static/js/53.09c375f5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bac57e8f.css",
+    "static/js/main.4fd1613b.js"
+  ]
+}
